@@ -1,2 +1,9 @@
-# redgif_download_collection
-Downloads redgif profiles/collections
+# Redgif Download Collection
+Downloads redgif profiles/collections.
+
+Pretty self explanitory.
+Usage: 
+- node massdownload.js https://www.redgifs.com/users/[Username]
+- node massdownload.js https://www.redgifs.com/users/[Username]/collections/[CollectionID]
+
+It works but its garbage, coded it in an afternoon so if it breaks it breaks.
