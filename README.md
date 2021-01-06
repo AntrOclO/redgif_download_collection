@@ -2,6 +2,7 @@
 Downloads redgif profiles/collections.
 
 Pretty self explanitory.
+
 Usage: 
 - node massdownload.js https://www.redgifs.com/users/[Username]
 - node massdownload.js https://www.redgifs.com/users/[Username]/collections/[CollectionID]
