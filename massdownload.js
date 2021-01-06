@@ -6,7 +6,7 @@ var names = []
 
 var website = process.argv[2]
 
-if(!website.toString().match(/https:\/\/www.redgifs.com\/users\/.+/)){
+if (!website.toString().match(/https:\/\/www.redgifs.com\/users\/.+/)) {
     console.warn("Not a vaild website")
     return;
 }
@@ -32,21 +32,20 @@ request(website, (error, response, html) => {
 
         for (gif in gifs) {
             var name = gifs[gif]["gfyName"]
-            var width = gifs[gif]["width"]
-            var height = gifs[gif]["height"]
-
-            if(width<height){
-                names.push(name)
-                console.log(name)
-            }
+            names.push(name)
+            console.log(name)
         }
 
-        if (!fs.existsSync("output/"+ username)){
-            fs.mkdirSync("output/"+ username);
+        if (!fs.existsSync("output")) {
+            fs.mkdirSync("output");
+        }
+
+        if (!fs.existsSync("output/" + username)) {
+            fs.mkdirSync("output/" + username);
         }
 
         names.forEach((name) => {
-            const file = fs.createWriteStream("output/"+ username +"/"+ name + ".mp4")
+            const file = fs.createWriteStream("output/" + username + "/" + name + ".mp4")
             const request = http.get("https://thumbs2.redgifs.com/" + name + ".mp4", function (response) {
                 response.pipe(file)
             })
