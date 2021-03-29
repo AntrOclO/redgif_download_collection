@@ -1,4 +1,7 @@
 # Redgif Download Collection
+
+This currently dosent work. Updates soon
+
 Downloads redgif profiles/collections.
 
 Pretty self explanitory.
